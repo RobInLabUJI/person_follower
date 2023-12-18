@@ -15,7 +15,7 @@
 import rclpy
 from rclpy.node import Node
 
-from std_msgs.msg import String
+from sensor_msgs.msg import LaserScan
 
 
 class PersonFollower(Node):
@@ -23,14 +23,14 @@ class PersonFollower(Node):
     def __init__(self):
         super().__init__('person_follower')
         self.subscription = self.create_subscription(
-            String,
-            'topic',
+            LaserScan,
+            '/scan',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        self.get_logger().info('I heard: "%s"' % msg.data)
+        self.get_logger().info("I heard a scan")
 
 
 def main(args=None):
