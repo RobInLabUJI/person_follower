@@ -1,5 +1,7 @@
 # Person-following Python ROS 2 template
 
+We assume that [ROS 2](https://docs.ros.org/) and [Webots](https://cyberbotics.com/) are installed in the system.
+
 1. Install the prerequisites
 ```
 sudo apt install webots_ros2_turtlebot
