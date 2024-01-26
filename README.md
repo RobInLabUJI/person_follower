@@ -1,6 +1,8 @@
 # Person-following Python ROS 2 template
 
-We assume that [ROS 2](https://docs.ros.org/) and [Webots](https://cyberbotics.com/) are installed in the system.
+We assume that [ROS 2](https://docs.ros.org/) and [Webots](https://cyberbotics.com/) are installed in the system. 
+
+For the steps below we use ROS2 Foxy and Webots R2022b.
 
 1. Install the prerequisites
 ```
@@ -15,6 +17,7 @@ mkdir -p ros2_ws/src
 cd ros2_ws/src
 git clone https://github.com/RobInLabUJI/person_follower.git
 cd ..
+source /opt/ros/foxy/setup.bash
 colcon build --symlink-install
 ```
 4. Copy the Webots world file to the ROS package folder
