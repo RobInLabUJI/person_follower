@@ -22,23 +22,23 @@ colcon build --symlink-install
 ```
 4. Copy the Webots world file to the ROS package folder
 ```
-sudo cp webots/turtlebot3_burger_pedestrian_simple.wbt /opt/ros/foxy/share/webots_ros2_turtlebot/worlds/.
+sudo cp src/person_follower/webots/turtlebot3_burger_pedestrian_simple.wbt \
+        /opt/ros/foxy/share/webots_ros2_turtlebot/worlds/.
 ```
-5. Launch the Webots simulator
+5. Run the person-following node
 ```
-export WEBOTS_HOME=...
+source install/setup.bash
+ros2 run person_follower person_follower 
+```
+6. In a new terminal, launch the Webots simulator
+```
+export WEBOTS_HOME=$HOME/webots-R2022b
 source /opt/ros/foxy/setup.bash
 ros2 launch webots_ros2_turtlebot robot_launch.py \
   world:=turtlebot3_burger_pedestrian_simple.wbt
 ```
-6. Launch RViz
+7. In a new terminal, launch RViz
 ```
 source /opt/ros/foxy/setup.bash
-rviz2 -d webots/config.rviz
-```
-7. Run the person-following node
-```
-source /opt/ros/foxy/setup.bash
-source install/setup.bash
-ros2 run person_follower person_follower 
+rviz2 -d src/person_follower/webots/config.rviz
 ```
