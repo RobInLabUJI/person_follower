@@ -13,7 +13,7 @@ mkdir -p ros2_ws/src
 3. Clone this repository and build the package
 ```
 cd ros2_ws/src
-git clone ...
+git clone https://github.com/RobInLabUJI/person_follower.git
 cd ..
 colcon build --symlink-install
 ```
