@@ -6,7 +6,7 @@ For the steps below we use ROS2 Foxy and Webots R2022b.
 
 1. Install the prerequisites
 ```
-sudo apt install webots_ros2_turtlebot
+sudo apt install ros-foxy-webots-ros2-turtlebot
 ```
 2. Create a ROS 2 workspace
 ```
