@@ -156,7 +156,8 @@ DirectionPanel {
 Pedestrian {
   translation 8 -3 1.27
   controllerArgs [
-    "--trajectory=8 -3, 7.75 -3, 6.75 -2, 6.75 2.5, 7.75 3.5, 8 3.5, 9 2.5, 9 -2"
+    "--trajectory=8 -3, 7.75 -3, 6.75 -2, 6.75 2.5, 7.75 3.5, 8 3.5, 9 2.5, 9 -2",
+    "--speed=0.15"
   ]
   shirtColor 0.6 0.4 0.35
   pantsColor 0.18 0.18 0.23
